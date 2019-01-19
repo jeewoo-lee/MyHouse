@@ -20,12 +20,13 @@ public class MyHouse
     private Circle sun;
     private Circle moon;
     private Bush shrub;
+    private Tree pineTree;
     
 
     /**
      * Constructor for objects of class myHouse
      */
-    public MyHouse()
+    public MyHouse(int x, int y)
     {
         // initialise instance variables
         sky = new Square();
@@ -41,18 +42,21 @@ public class MyHouse
         moon = new Circle();
         
         // Draw the house
-        drawHouse();
+        drawHouse(x,y);
         
         // Create the bush
-        shrub = new Bush();
-
+        shrub = new Bush(450,400);
+        
+        // Create the pine tree
+        pineTree = new Tree(270,400);
+        pineTree = new Tree(360,430);
     }
 
     /**
      * Draws the house
      *
      */
-    public void drawHouse()
+    public void drawHouse(int x, int y)
     {
         // Arrange each object
         sky.makeVisible();
@@ -71,41 +75,41 @@ public class MyHouse
         base.changeSize(200);
         base.changeColor("Black");
         base.moveLeft();
-        base.moveVertical(245);
-        base.moveHorizontal(10);
+        base.moveVertical(y);
+        base.moveHorizontal(x);
         
         door1.makeVisible();
         door1.changeSize(50);
-        door1.moveHorizontal(60);
-        door1.moveVertical(410);
+        door1.moveHorizontal(x+50);
+        door1.moveVertical(y+165);
         door1.moveUp();
         
         door2.makeVisible();
         door2.changeSize(50);
-        door2.moveHorizontal(60);
-        door2.moveVertical(350);
+        door2.moveHorizontal(x+50);
+        door2.moveVertical(y+105);
         
         roof.makeVisible();
         roof.changeColor("red");
         roof.changeSize(50,250);
-        roof.moveHorizontal(100);
-        roof.moveVertical(230);
+        roof.moveHorizontal(x+90);
+        roof.moveVertical(y-15);
         
         chimney1.makeVisible();
         chimney1.changeColor("red");
-        chimney1.moveHorizontal(20);
-        chimney1.moveVertical(200);
+        chimney1.moveHorizontal(x+10);
+        chimney1.moveVertical(y-45);
         
         window.makeVisible();
         window.changeColor("yellow");
         window.changeSize(50);
-        window.moveHorizontal(100);
-        window.moveVertical(260);
+        window.moveHorizontal(x+90);
+        window.moveVertical(y+15);
         
         handle.makeVisible();
         handle.changeSize(15);
-        handle.moveHorizontal(100);
-        handle.moveVertical(380);
+        handle.moveHorizontal(x+90);
+        handle.moveVertical(y+135);
         handle.changeColor("yellow");
         
         sun.makeVisible();

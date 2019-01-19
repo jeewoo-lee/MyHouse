@@ -22,7 +22,7 @@ public class Bush
     /**
      * Constructor for objects of class Bush
      */
-    public Bush()
+    public Bush(int x, int y)
     {
         // initialise instance variables
         leaf1 = new Circle();
@@ -35,70 +35,71 @@ public class Bush
         tree2 = new Square();
         tree3 = new Square();
         // Draw the actual bush
-        drawBush();
+        drawBush(x, y);
+        
     }
 
     /**
      * Draw the bush
      */
-    public void drawBush()
+    public void drawBush(int x, int y)
     {
         // put your code here
         tree1.makeVisible();
         tree1.changeColor("brown");
         tree1.changeSize(40);
-        tree1.moveHorizontal(300);
-        tree1.moveVertical(400);
+        tree1.moveHorizontal(x);
+        tree1.moveVertical(y);
         
         tree2.makeVisible();
         tree2.changeColor("brown");
         tree2.changeSize(40);
-        tree2.moveHorizontal(300);
-        tree2.moveVertical(360);
+        tree2.moveHorizontal(x);
+        tree2.moveVertical(y-40);
         
         tree3.makeVisible();
         tree3.changeColor("brown");
         tree3.changeSize(40);
-        tree3.moveHorizontal(300);
-        tree3.moveVertical(330);
+        tree3.moveHorizontal(x);
+        tree3.moveVertical(y-70);
         
         leaf1.makeVisible();
         leaf1.changeColor("green");
         leaf1.changeSize(50);
-        leaf1.moveHorizontal(310);
-        leaf1.moveVertical(320);
+        leaf1.moveHorizontal(x + 10);
+        leaf1.moveVertical(y-80);
         
         
       
         leaf2.makeVisible();
         leaf2.changeColor("green");
         leaf2.changeSize(50);
-        leaf2.moveHorizontal(330);
-        leaf2.moveVertical(320);
+        leaf2.moveHorizontal(x + 30);
+        leaf2.moveVertical(y-80);
         
         leaf3.makeVisible();
         leaf3.changeColor("green");
         leaf3.changeSize(50);
-        leaf3.moveHorizontal(360);
-        leaf3.moveVertical(320);
+        leaf3.moveHorizontal(x + 60);
+        leaf3.moveVertical(y-80);
         
         leaf4.makeVisible();
         leaf4.changeColor("green");
         leaf4.changeSize(50);
-        leaf4.moveHorizontal(320);
-        leaf4.moveVertical(300);
+        leaf4.moveHorizontal(x + 20);
+        leaf4.moveVertical(y-100);
         
         leaf5.makeVisible();
         leaf5.changeColor("green");
         leaf5.changeSize(50);
-        leaf5.moveHorizontal(350);
-        leaf5.moveVertical(300);
+        leaf5.moveHorizontal(x + 50);
+        leaf5.moveVertical(y-100);
         
         leaf6.makeVisible();
         leaf6.changeColor("green");
         leaf6.changeSize(50);
-        leaf6.moveHorizontal(335);
-        leaf6.moveVertical(280);
+        leaf6.moveHorizontal(x + 35);
+        leaf6.moveVertical(y-120);
         
     }
 }
